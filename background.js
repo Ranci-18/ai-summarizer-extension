@@ -1,6 +1,6 @@
 import { GoogleGenerativeAI } from "@google/generative-ai";
 
-const genAI = new GoogleGenerativeAI("AIzaSyAz8o4tAgWxpJHLGkswYYqpz7MOnKCjoWk");
+const genAI = new GoogleGenerativeAI(process.env.API-KEY);
 
 chrome.runtime.onMessage.addListener(async (msg, sender, sendResponse) => {
     if (msg.action === "summaize") {
